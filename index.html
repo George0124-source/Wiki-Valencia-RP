@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valencia Roleplay | ER:LC</title>
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="https://cdn.discordapp.com/icons/1367530270844129350/b5ff81539cb9590501935a2bdf63a499.webp?size=480">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #e74c3c; /* Rojo Navidad/Valencia */
+            --secondary: #f1c40f; /* Dorado/Amarillo Valencia */
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #ecf0f1;
+            --accent: #2ecc71; /* Verde Navidad */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--secondary);
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .logo-text span { color: var(--secondary); }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://cdn.discordapp.com/banners/1367530270844129350/f5b60f871e04993d35ef664c267ded74.webp?size=1024');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+            border: 2px solid var(--primary);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        /* --- Stats / Celebration --- */
+        .milestone {
+            background: var(--card-bg);
+            padding: 40px 10%;
+            text-align: center;
+            border-bottom: 4px solid var(--secondary);
+        }
+        
+        .milestone h2 {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--primary);
+            margin: 10px auto;
+        }
+
+        /* --- Facciones --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .card h3 { margin-bottom: 10px; color: white; }
+
+        /* --- Jobs List --- */
+        .jobs-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .job-tag {
+            background-color: #2c3e50;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            border-left: 5px solid var(--secondary);
+        }
+
+        /* --- Normativas (Accordion) --- */
+        .rules-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+            border-left: 5px solid var(--primary);
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #252525;
+        }
+
+        summary:after {
+            content: '+'; 
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        details[open] summary:after {
+            content: '-';
+        }
+
+        .rule-content {
+            padding: 20px;
+            color: #ccc;
+            font-size: 0.95rem;
+            border-top: 1px solid #333;
+        }
+
+        .rule-content ul {
+            padding-left: 20px;
+        }
+        
+        .rule-content strong {
+            color: var(--secondary);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #000;
+            padding: 40px 10%;
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+        }
+
+        footer p { margin-bottom: 10px; }
+        
+        .socials a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+        
+        .socials a:hover { color: var(--primary); }
+
+        /* --- Mobile --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; } /* Simple ocultar para este ejemplo, idealmente un burger menu */
+            header { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="https://cdn.discordapp.com/icons/1367530270844129350/b5ff81539cb9590501935a2bdf63a499.webp?size=480" alt="Valencia RP Logo" class="logo-img">
+            <div class="logo-text">VALENCIA <span>RP</span></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#facciones">Facciones</a></li>
+                <li><a href="#trabajos">Negocios</a></li>
+                <li><a href="#normativa">Normativa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <h1>VALENCIA ROLEPLAY</h1>
+        <p>Rol Semi-Serio Ambientado en España | Comunidad Activa y Creciente</p>
+        <div style="margin-bottom: 20px;">
+            <span style="color: var(--secondary); font-size: 1.5rem; font-weight: bold;">
+                <i class="fas fa-tree"></i> ¡Especial Navidad! <i class="fas fa-tree"></i>
+            </span>
+        </div>
+        <a href="https://discord.gg/tuserver" class="btn"><i class="fab fa-discord"></i> Unirse al Discord</a>
+    </section>
+
+    <!-- Milestone Section -->
+    <div class="milestone">
+        <i class="fas fa-users" style="font-size: 3rem; color: var(--text-color);"></i>
+        <h2>¡Somos +1000 Miembros!</h2>
+        <p>Gracias por formar parte de esta gran comunidad. Seguimos creciendo día a día para ofrecerte el mejor rol de ER:LC en español.</p>
+    </div>
+
+    <!-- Facciones -->
+    <section id="facciones">
+        <h2 class="section-title">Cuerpos de Seguridad & Emergencias</h2>
+        <div class="grid-container">
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Policía Nacional</h3>
+                <p>Protección y servicio al ciudadano en las calles de Valencia.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-flag"></i>
+                <h3>Guardia Civil</h3>
+                <p>Seguridad ciudadana y control del territorio.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Policía Local</h3>
+                <p>Policía Local Valenciana.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-fire-extinguisher"></i>
+                <h3>Bombers de València</h3>
+                <p>Rescate y extinción de incendios.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-ambulance"></i>
+                <h3>SAMU</h3>
+                <p>Servicio de Ayuda Médica Urgente.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-road"></i>
+                <h3>Red de Carreteras</h3>
+                <p>Mantenimiento y seguridad vial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trabajos / Negocios -->
+    <section id="trabajos" style="background-color: #181818;">
+        <h2 class="section-title">Negocios & Servicios Civiles</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Descubre las empresas y servicios disponibles en la ciudad:</p>
+        <div class="jobs-list">
+            <div class="job-tag">📞 112 Emergencias</div>
+            <div class="job-tag">✂️ Barbershop Puñalon</div>
+            <div class="job-tag">⚖️ Anderson y Co (Abogados)</div>
+            <div class="job-tag">🎙️ Podcast Studio</div>
+            <div class="job-tag">🚕 Taxis VLC</div>
+            <div class="job-tag">🔧 Auto Fix Pro (Mecánico)</div>
+            <div class="job-tag">🍖 Asador Español</div>
+        </div>
+    </section>
+
+    <!-- Normativa -->
+    <section id="normativa">
+        <h2 class="section-title">Normativa Oficial</h2>
+        <p style="text-align: center; margin-bottom: 20px; color: #888;">Haz clic en cada sección para desplegar las normas.</p>
+        
+        <div class="rules-container">
+            
+            <!-- Introducción y Conceptos -->
+            <details open>
+                <summary>1.0 Conceptos Básicos de Rol</summary>
+                <div class="rule-content">
+                    <p><strong>Uso del /me y /do:</strong></p>
+                    <ul>
+                        <li>/me: Acciones del personaje. Ej: <em>/me le aplica un vendaje.</em></li>
+                        <li>/do: Entorno y detalles. Ej: <em>/do La puerta estaría cerrada.</em></li>
+                    </ul>
+                    <br>
+                    <p><strong>Diccionario de Faltas:</strong></p>
+                    <ul style="list-style: none;">
+                        <li><strong>MG (Meta Gaming):</strong> Usar info OOC para beneficio IC.</li>
+                        <li><strong>ER (Evadir Rol):</strong> Evitar una situación de rol intencionadamente.</li>
+                        <li><strong>DM (Death Match):</strong> Asesinar sin razón.</li>
+                        <li><strong>NVVPJ:</strong> No valorar la vida de tu personaje.</li>
+                        <li><strong>PG (Power Gaming):</strong> Realizar acciones imposibles.</li>
+                        <li><strong>BD (Bad Driving):</strong> Conducir de forma irreal (carril contrario/acera).</li>
+                        <li><strong>ZZ (Zig Zag):</strong> Moverse en zig zag para evitar balas.</li>
+                        <li><strong>HQ / IHQ:</strong> Base de facción / Invasión de base.</li>
+                        <li><strong>NRE / NRH / NRC:</strong> No rolear Entorno / Heridas / Choque.</li>
+                        <li><strong>PK / CK:</strong> Partial Kill (pérdida memoria parcial) / Character Kill (muerte total).</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- CKs -->
+            <details>
+                <summary>2.0 Normativa de CK (Character Kill)</summary>
+                <div class="rule-content">
+                    <ul>
+                        <li>Para realizar un CK se requiere un rol previo de <strong>48 horas</strong>.</li>
+                        <li>Motivos claros sin MG.</li>
+                        <li>Pruebas gráficas obligatorias (foto DNI y cara IC).</li>
+                        <li>Permitido a jefes de empresas/corporaciones (ej. Jefe Guardia Civil) y Jefes de Banda (con investigación previa).</li>
+                        <li><strong>Prohibido</strong> hacer CK a policías solo por ser policías.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Discord -->
+            <details>
+                <summary>3.0 Normativa Discord y Toxicidad</summary>
+                <div class="rule-content">
+                    <p>Objetivo: Garantizar un ambiente respetuoso.</p>
+                    <ul>
+                        <li>Prohibido insultar o hablar mal de otros.</li>
+                        <li>No usar canales incorrectos para comandos.</li>
+                        <li>Votar en aperturas y no unirse es sancionable.</li>
+                        <li>Prohibido estafar OOC.</li>
+                        <li>Prohibido compartir pantalla en canales de voz IC.</li>
+                        <li>Contenido Gore/+18 prohibido (Baneo).</li>
+                        <li><strong>Toxicidad Cero:</strong> No humillar, acosar, amenazar o discriminar.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- Roblox -->
+            <details>
+                <summary>4.0 Normativa Roblox (Ingame)</summary>
+                <div class="rule-content">
+                    <ul>
+                        <li>Skin realista y no cuadrada.</li>
+                        <li>Prohibido rolear chaleco antibalas si no lo tienes por script.</li>
+                        <li>Prohibida la explotación infantil, grooming, roles +18, etc.</li>
+                        <li><strong>Respawn:</strong> Esperar 4 minutos si te abaten (5 si hay SAMU).</li>
+                        <li><strong>Cooldown agresivo:</strong> Si inicias un rol agresivo, esperar 15 min para el siguiente.</li>
+                        <li>Prohibido secuestrar a SAMU en servicio.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <!-- 2PJ -->
+            <details>
+                <summary>5.0 Reglas 2PJ (Doble Personaje)</summary>
+                <div class="rule-content">
+                    <p>Los personajes deben ser totalmente independientes:</p>
+                    <ul>
+                        <li>Distintas historias, objetivos y entornos.</li>
+                        <li>Prohibido que se relacionen o beneficien entre sí.</li>
+                        <li>Un PJ no puede pasar contactos al otro.</li>
+                        <li>Ninguno debe saber lo que hace el otro.</li>
+                        <li>Cambios de PJ justificados (no cambiar para sacar ventaja).</li>
+                    </ul>
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo-text" style="margin-bottom: 20px;">VALENCIA <span>RP</span></div>
+        <p>© 2024 Valencia Roleplay - Todos los derechos reservados.</p>
+        <p>Owner: Noeleitor | Servidor de Roblox ER:LC</p>
+        <p>Desarrolador/Developer: george00_. / Zyn0rX ツ</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
