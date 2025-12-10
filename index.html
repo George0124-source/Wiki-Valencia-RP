@@ -478,6 +478,227 @@
         </div>
     </section>
 
+
+    <!-- SECCIÓN STAFF -->
+    <section id="staff" style="background-color: #151515; position: relative;">
+        <h2 class="section-title">Jerarquía del Servidor</h2>
+        <p style="text-align: center; margin-bottom: 40px; color: #aaa;">Conoce a las personas que hacen posible Valencia RP</p>
+
+        <!-- ESTILOS ESPECIFICOS PARA EL STAFF -->
+        <style>
+            .staff-group {
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            .group-title {
+                color: var(--secondary);
+                font-family: 'Montserrat', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 25px;
+                display: inline-block;
+                border-bottom: 2px solid var(--primary);
+                padding-bottom: 5px;
+            }
+            .staff-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .staff-card {
+                background: #252525;
+                padding: 20px;
+                border-radius: 10px;
+                width: 220px;
+                text-align: center;
+                border-top: 3px solid #555;
+                transition: 0.3s;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            }
+            .staff-card:hover {
+                transform: translateY(-5px);
+                background: #2a2a2a;
+            }
+            .staff-img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                object-fit: cover;
+                border: 2px solid #555;
+            }
+            .staff-role {
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-bottom: 5px;
+                background: #333;
+                display: inline-block;
+                padding: 2px 10px;
+                border-radius: 10px;
+            }
+            .staff-name {
+                font-weight: 700;
+                font-size: 1.1rem;
+                color: white;
+            }
+            
+            /* Colores por Rango */
+            .owner-card { border-top-color: var(--primary); }
+            .owner-card .staff-img { border-color: var(--primary); }
+            
+            .high-staff-card { border-top-color: var(--secondary); }
+            .high-staff-card .staff-img { border-color: var(--secondary); }
+
+            .mod-card { border-top-color: #3498db; }
+            .support-card { border-top-color: #2ecc71; }
+
+            /* Lista compacta para soportes */
+            .compact-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .compact-item {
+                background: #1e1e1e;
+                padding: 8px 15px;
+                border-radius: 5px;
+                font-size: 0.9rem;
+                border-left: 3px solid #95a5a6;
+            }
+        </style>
+
+        <!-- 1. CÚPULA FUNDADORA (Dueños y CEO) -->
+        <div class="staff-group">
+            <h3 class="group-title">👑 Cúpula Fundadora 👑</h3>
+            <div class="staff-grid">
+                
+                <!-- Dueño -->
+                <div class="staff-card owner-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/0.png" class="staff-img">
+                    <div class="staff-role" style="color: var(--primary);">Dueño</div>
+                    <div class="staff-name">hasl3g3nd1234</div>
+                </div>
+
+                <!-- Co-Dueños -->
+                <div class="staff-card owner-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/1.png" class="staff-img">
+                    <div class="staff-role" style="color: var(--primary);">Co-Dueño</div>
+                    <div class="staff-name">Mendoza</div>
+                </div>
+                <div class="staff-card owner-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/2.png" class="staff-img">
+                    <div class="staff-role" style="color: var(--primary);">Co-Dueño</div>
+                    <div class="staff-name">Wednesday</div>
+                </div>
+
+                <!-- CEO -->
+                <div class="staff-card owner-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/3.png" class="staff-img">
+                    <div class="staff-role" style="color: white;">CEO</div>
+                    <div class="staff-name">luisfernandez895</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. CONSEJO DIRECTIVO (Gestión y Coordinación) -->
+        <div class="staff-group">
+            <h3 class="group-title">🌴 Consejo Directivo 🌴</h3>
+            <div class="staff-grid">
+                
+                <div class="staff-card high-staff-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/4.png" class="staff-img">
+                    <div class="staff-role" style="color: var(--secondary);">Coord. Staff</div>
+                    <div class="staff-name">Jorgito27201</div>
+                </div>
+
+                <div class="staff-card high-staff-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/5.png" class="staff-img">
+                    <div class="staff-role" style="color: var(--secondary);">Gestor Directivo</div>
+                    <div class="staff-name">Ian</div>
+                </div>
+
+                <div class="staff-card high-staff-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/0.png" class="staff-img">
+                    <div class="staff-role" style="color: #9b59b6;">Community Manager</div>
+                    <div class="staff-name">alexarcoir</div>
+                </div>
+                <div class="staff-card high-staff-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/1.png" class="staff-img">
+                    <div class="staff-role" style="color: #9b59b6;">Community Manager</div>
+                    <div class="staff-name">Rayomacuin2226</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. EQUIPO DE MODERACIÓN Y ADMINISTRACIÓN -->
+        <div class="staff-group">
+            <h3 class="group-title">🛡️ Administración y Moderación 🛡️</h3>
+            <div class="staff-grid">
+                
+                <!-- Admin & Dir Mod -->
+                <div class="staff-card mod-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/2.png" class="staff-img">
+                    <div class="staff-role">Administrador</div>
+                    <div class="staff-name">erjulixn</div>
+                </div>
+                <div class="staff-card mod-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/3.png" class="staff-img">
+                    <div class="staff-role">Director Mod.</div>
+                    <div class="staff-name">Noah_rex09</div>
+                </div>
+
+                <!-- Moderadores -->
+                <div class="staff-card mod-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/4.png" class="staff-img">
+                    <div class="staff-role">Moderador</div>
+                    <div class="staff-name">pinochos00</div>
+                </div>
+                <div class="staff-card mod-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/5.png" class="staff-img">
+                    <div class="staff-role">Moderador</div>
+                    <div class="staff-name">Juanma (Tamayo)</div>
+                </div>
+
+                 <!-- Ayudante -->
+                 <div class="staff-card mod-card">
+                    <img src="https://cdn.discordapp.com/embed/avatars/0.png" class="staff-img">
+                    <div class="staff-role">Ayudante</div>
+                    <div class="staff-name">Register_2011</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. EQUIPO DE SOPORTE (Lista Compacta) -->
+        <div class="staff-group">
+            <h3 class="group-title">🦺 Equipo de Soporte 🦺</h3>
+            
+            <h4 style="color:white; margin-bottom:10px;">Soportes Oficiales</h4>
+            <div class="compact-list" style="margin-bottom: 20px;">
+                <div class="compact-item">Juleizan1702</div>
+                <div class="compact-item">omarginesy</div>
+                <div class="compact-item">mesasji</div>
+            </div>
+
+            <h4 style="color:#aaa; margin-bottom:10px;">Soportes en Pruebas</h4>
+            <div class="compact-list">
+                <div class="compact-item">Aitor_inteligente2</div>
+                <div class="compact-item">Maria_auxiliadora92</div>
+                <div class="compact-item">Tio23toni</div>
+                <div class="compact-item">yerai0034</div>
+                <div class="compact-item">izan_cnl</div>
+                <div class="compact-item">rockysonuepro</div>
+                <div class="compact-item">ELK / chichoterremot</div>
+                <div class="compact-item">Trixi</div>
+                <div class="compact-item">TheRealMarti</div>
+                <div class="compact-item">...y el resto del equipo</div>
+            </div>
+        </div>
+
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="logo-text" style="margin-bottom: 20px;">VALENCIA <span>RP</span></div>
