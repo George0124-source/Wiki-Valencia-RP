@@ -480,7 +480,7 @@
 
 
    <!-- =========================================
-     SECCIÓN STAFF (JERARQUÍA)
+     SECCIÓN STAFF (ACTUALIZADA)
      ========================================= -->
 <section id="staff" style="background-color: #121212; padding: 60px 10%; border-top: 2px solid #e74c3c;">
     <h2 class="section-title" style="text-align: center; color: white; margin-bottom: 50px;">Jerarquía del Servidor</h2>
@@ -542,7 +542,8 @@
         .staff-name {
             color: #ecf0f1;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            word-wrap: break-word;
         }
 
         /* COLORES ESPECIFICOS POR RANGO */
@@ -577,7 +578,7 @@
         
         <!-- Dueño -->
         <div class="staff-card border-owner">
-            <img src="https://cdn.discordapp.com/avatars/713674451366969356/7caae1b7b0562218824ce4e9439ea0ea.png?size=4096&ignore=true)." class="staff-img">
+            <img src="https://cdn.discordapp.com/avatars/713674451366969356/7caae1b7b0562218824ce4e9439ea0ea.png?size=4096&ignore=true" class="staff-img">
             <div class="staff-role" style="background:#e74c3c;">Dueño</div>
             <div class="staff-name">hasl3g3nd1234</div>
         </div>
@@ -633,24 +634,10 @@
         </div>
     </div>
 
-    <!-- 3. ADMINISTRACIÓN Y MODERACIÓN -->
-    <h3 class="staff-section-title">🧩 Administración</h3>
+    <!-- 3. EQUIPO DE MODERACIÓN -->
+    <h3 class="staff-section-title">🐙 Equipo de Moderación</h3>
     <div class="staff-grid">
         
-        <!-- Administrador -->
-        <div class="staff-card border-admin">
-            <img src="https://cdn.discordapp.com/avatars/1251155534216957976/39524988edcfbd162675324585ecfe04.png?size=1024" class="staff-img">
-            <div class="staff-role">Admin</div>
-            <div class="staff-name">erjulixn</div>
-        </div>
-
-        <!-- Director Moderativo -->
-        <div class="staff-card border-admin">
-            <img src="https://cdn.discordapp.com/avatars/1014575703401955359/a_85c616e3b3b19954cf46ccd32c95e9e7.gif?size=1024" class="staff-img">
-            <div class="staff-role">Dir. Mod</div>
-            <div class="staff-name">Noah_rex09</div>
-        </div>
-
         <!-- Moderadores -->
         <div class="staff-card border-mod">
             <img src="https://cdn.discordapp.com/avatars/1192900371807477806/a654b25fc1d4c230770acd51ad744d55.png?size=1024" class="staff-img">
@@ -662,11 +649,14 @@
             <div class="staff-role">Moderador</div>
             <div class="staff-name">Juanma (Tamayo)</div>
         </div>
-
-        <!-- Ayudante -->
+        <div class="staff-card border-mod">
+            <img src="https://cdn.discordapp.com/avatars/1014575703401955359/a_85c616e3b3b19954cf46ccd32c95e9e7.gif?size=1024" class="staff-img">
+            <div class="staff-role">Moderador</div>
+            <div class="staff-name">Noah_rex09</div>
+        </div>
         <div class="staff-card border-mod">
             <img src="https://cdn.discordapp.com/avatars/1115985683278995486/e26a27a04dc306269a559e33a2502518.png?size=1024" class="staff-img">
-            <div class="staff-role">Ayudante</div>
+            <div class="staff-role">Moderador</div>
             <div class="staff-name">Register_2011</div>
         </div>
     </div>
@@ -674,8 +664,8 @@
     <!-- 4. EQUIPO DE SOPORTE -->
     <h3 class="staff-section-title">🦺 Equipo de Soporte</h3>
     
-    <!-- Soportes Principales (Con Foto) -->
     <div class="staff-grid">
+        <!-- Usuarios existentes con foto -->
         <div class="staff-card border-support">
             <img src="https://cdn.discordapp.com/avatars/1065671711153987615/90235fd1578b7619502f4a23af201484.png?size=1024" class="staff-img">
             <div class="staff-role">Soporte</div>
@@ -691,21 +681,36 @@
             <div class="staff-role">Soporte</div>
             <div class="staff-name">mesasji</div>
         </div>
+        
+        <!-- Nuevos Soportes (Con imagen genérica) -->
+        <div class="staff-card border-support">
+            <img src="https://cdn.discordapp.com/avatars/1298347597047791666/ff955f121a557eb1750616fd341a21fe.png?size=1024">
+            <div class="staff-role">Soporte</div>
+            <div class="staff-name">Aitor_inteligente2</div>
+        </div>
+        <div class="staff-card border-support">
+            <img src="https://cdn.discordapp.com/avatars/1130995953931923527/d671327b5b2a0361d6a54945a89eb4dd.png?size=1024" class="staff-img">
+            <div class="staff-role">Soporte</div>
+            <div class="staff-name">Maria_auxiliadora92</div>
+        </div>
+        <div class="staff-card border-support">
+            <img src="https://cdn.discordapp.com/avatars/1000807055109660773/8a40e71c3c850006d037f595d4df04c4.png?size=1024">
+            <div class="staff-role">Soporte</div>
+            <div class="staff-name">derrollek</div>
+        </div>
     </div>
 
-    <!-- Soportes en Pruebas (Lista sin foto para ahorrar espacio) -->
+    <!-- Soportes en Pruebas -->
     <div style="text-align: center; margin-top: 30px;">
         <h4 style="color: #777; font-weight: 400; margin-bottom: 10px;">Soportes en Pruebas</h4>
         <div class="trial-list">
-            <div class="trial-tag">Aitor_inteligente2</div>
-            <div class="trial-tag">Maria_auxiliadora92</div>
+            <div class="trial-tag">𝒎𝒂𝒏𝒖𝒖77𝒌𝒕𝒙</div>
+            <div class="trial-tag">Sergio 🌴</div>
             <div class="trial-tag">Tio23toni</div>
-            <div class="trial-tag">yerai0034</div>
             <div class="trial-tag">izan_cnl</div>
             <div class="trial-tag">rockysonuepro</div>
             <div class="trial-tag">ELK / chichoterremot</div>
             <div class="trial-tag">Trixi</div>
-            <div class="trial-tag">TheRealMarti</div>
         </div>
     </div>
 
@@ -716,7 +721,7 @@
         <div class="logo-text" style="margin-bottom: 20px;">VALENCIA <span>RP</span></div>
         <p>© 2025/2026 Valencia Roleplay - Todos los derechos reservados.</p>
         <p>Owner: Noeleitor | Servidor de Roblox ER:LC</p>
-        <p>Desarrolador/Developer: george00_. / Zyn0rX ツ</p>
+        <p>Desarrollador/Developer: george00_. / Zyn0rX ツ</p>
         <div class="socials">
             <a href="#"><i class="fab fa-discord"></i></a>
             <a href="#"><i class="fab fa-youtube"></i></a>
